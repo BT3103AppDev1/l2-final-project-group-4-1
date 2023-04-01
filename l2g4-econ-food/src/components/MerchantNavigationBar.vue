@@ -3,9 +3,10 @@
     <ul>
       <img class="image" src="@/images/logo.png" />
       <li><a @click="profileClickRouter">Profile</a></li>
-      <li><a @click="cartRouter">Cart</a></li>
+      <li><a href="#">Analytics</a></li>
+      <li><a @click="listingsClickRouter">Listings</a></li>
       <li><a href="#">Orders</a></li>
-      <li><a @click="marketplaceClickRouter">Marketplace</a></li>
+      <li><a @click="dashboardClickRouter">Dashboard</a></li>
     </ul>
   </div>
 </template>
@@ -14,7 +15,7 @@
 import { getAuth, onAuthStateChanged } from "@firebase/auth";
 
 export default {
-  name: "CustomerNavigationBar",
+  name: "MerchantNavigationBar",
   components: {},
   data: function () {
     return {};
@@ -31,14 +32,14 @@ export default {
         }
       });
     },
-    marketplaceClickRouter: function () {
-      this.$router.push(`/marketplace`);
+    dashboardClickRouter: function () {
+      this.$router.push(`/dashboard`);
     },
     profileClickRouter: function () {
-      this.$router.push(`/customerprofile`);
+      this.$router.push(`/merchantprofile`);
     },
-    cartRouter: function () {
-      this.$router.push(`/cart/${this.user.uid}`);
+    listingsClickRouter: function () {
+      this.$router.push(`/merchantlistings`);
     },
   },
 };
@@ -68,7 +69,6 @@ export default {
 }
 .nav li {
   float: right;
-  cursor: pointer;
 }
 
 .nav li a:hover {
@@ -87,6 +87,7 @@ export default {
   padding: 20px 30px 20px 30px;
   text-decoration: none;
   font-size: 11px;
+  cursor: pointer;
 }
 
 /* Add a color to the active/current link */
