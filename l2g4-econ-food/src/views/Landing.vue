@@ -1,54 +1,61 @@
 <template>
-  <div class="container">
-    <div class="center">
+
+  <div class="header">
+
+    <div class="title">
       <h1>Reducing food waste and</h1>
       <h1>providing affordable food</h1>
       <h1>options. One pickup at a time.</h1>
-        <router-link to="/aboutCustomer">
-            <button class="about">I'M A CUSTOMER</button>
-        </router-link>
-        <router-link to="/aboutMerchant">
-            <button class="about">I'M A MERCHANT</button>
-        </router-link>
-    </div>
-    <div class="topleft">
-        <img src='https://i.ibb.co/rkSWW2b/ECON-FOOD.png' class='icon'>
-    </div>
-    <div class="topright">
+      <br />
         <router-link to="/login">
-            <button class="signin">Sign In / Register</button>
+            <button class="signin">Sign In</button>
+        </router-link>
+        <router-link to="/register">
+            <button class="register">Register</button>
         </router-link>
     </div>
+
+    <div class="topleft">
+        <img src='../assets/logowhite.png' class='logo'>
+    </div>
+
   </div>
+
 </template>
+
 <script>
 export default {
     name: "Landing"
 }
 </script>
+
 <style scoped>  
 @import url('https://fonts.googleapis.com/css?family=Nunito Sans');
-.container {
-  background-image: url('https://i.ibb.co/C69CYVs/Landing-Register-Login-Page.png');
+
+.header {
+  background-image: url('../assets/bg2png.png');
   background-size: cover;
+  display: flex;
+  flex-direction: column;
   position: fixed;
+  height: 100vh;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
 }
 
-.container::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.25)
+  background-color: rgba(0, 0, 0, 0.4)
 }
 
-.center {
+.title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,47 +77,49 @@ export default {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 47px;
   font-weight: normal;
   font-family: 'Nunito Sans';
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 
 .signin {
-  background-color: #A9A9A9;
+  background-color: #16703c;
   color: #fff;
-  font-family: 'Nunito Sans';
-  border: none;
+  font-family: "Nunito Sans";
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 24px;
+  border-color: white;
+  padding: 10px 60px 10px;
+  font-size: 20px;
   cursor: pointer;
+  width: 190px;
+  text-align: center;
 }
 
-.about {
-  background-color: transparent;
-  border: 2px solid #fff;
+.register {
+  background-color: rgba(255, 255, 255, 0.7);;
+  color: black;
   font-family: 'Nunito Sans';
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
   border-radius: 5px;
-  margin-left: 10px;
+  border-color: white;
+  padding: 10px 60px 10px;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
   cursor: pointer;
-}
-
-.login-link {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
+  width: 190px;
+  text-align: center;
 }
 
 .icon {
   width: 200px;
   height: 200px;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
 }
 </style>
