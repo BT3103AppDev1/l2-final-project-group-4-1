@@ -1,37 +1,62 @@
 <template>
+  <div class="container">
+        <LandingHeader />
+        <AboutCustomer />
+        <AboutMerchant />
+        <!-- <v-footer border></v-footer> -->
+        <!-- <v-footer
+          class="bg-indigo-lighten-1 text-center d-flex flex-column"
+        >
+          <div>
+            <v-btn
+              v-for="icon in icons"
+              :key="icon"
+              class="mx-4"
+              :icon="icon"
+              variant="text"
+            ></v-btn>
+          </div>
 
-  <div class="header">
+          <div class="pt-0">
+            Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </div>
 
-    <div class="title">
-      <h1>Reducing food waste and</h1>
-      <h1>providing affordable food</h1>
-      <h1>options. One pickup at a time.</h1>
-      <br />
-        <router-link to="/login">
-            <button class="signin">Sign In</button>
-        </router-link>
-        <router-link to="/register">
-            <button class="register">Register</button>
-        </router-link>
+          <v-divider></v-divider>
+
+          <div>
+            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+          </div>
+        </v-footer> -->
     </div>
-
-    <div class="topleft">
-        <img src='../assets/logowhite.png' class='logo'>
-    </div>
-
-  </div>
-
 </template>
 
 <script>
+import LandingHeader from "../components/LandingHeader.vue";
+import AboutCustomer from "../components/AboutCustomer.vue";
+import AboutMerchant from "../components/AboutMerchant.vue";
+import 'vuetify/components';
+
 export default {
-    name: "Landing"
-}
+    name: "Landing",
+    components: {
+      LandingHeader,
+      AboutCustomer,
+      AboutMerchant
+    },
+};
 </script>
 
 <style scoped>  
 @import url('https://fonts.googleapis.com/css?family=Nunito Sans');
 
+/* .container {
+  height: 100vh;
+} */
+
+body {
+  margin: 0;
+}
+/* 
 .header {
   background-image: url('../assets/bg2png.png');
   background-size: cover;
@@ -83,9 +108,9 @@ h1 {
   color: #fff;
   margin-bottom: 10px;
   margin-top: 0px;
-}
+} */
 
-.signin {
+/* .signin {
   background-color: #16703c;
   color: #fff;
   font-family: "Nunito Sans";
@@ -111,9 +136,9 @@ h1 {
   cursor: pointer;
   width: 190px;
   text-align: center;
-}
+} */
 
-.icon {
+/* .icon {
   width: 200px;
   height: 200px;
 }
@@ -121,5 +146,5 @@ h1 {
 .logo {
   width: 200px;
   height: 100px;
-}
+} */
 </style>

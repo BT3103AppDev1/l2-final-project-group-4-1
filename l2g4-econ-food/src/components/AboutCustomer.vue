@@ -9,46 +9,38 @@
 
       <div class="col-left">
         <v-col class="center">
-          <h1>As a Merchant...</h1>
-
+          <h1>As a Customer...</h1>
+          
           <ListWithIcon
-            image-src="src/assets/merchant-icon-1.png"
-            image-alt="merchant-icon-1"
-            header="POST"
-            description="Upload a listing of your surplus food onto the marketplace"
+            image-src="src/assets/customer-icon-1.png"
+            image-alt="customer-icon-1"
+            header="LOCATE"
+            description="Discover a breath of food options from food places near you"
           />
 
           <br />
 
           <ListWithIcon
-            image-src="src/assets/merchant-icon-2.png"
-            image-alt="merchant-icon-2"
-            header="CONNECT"
-            description="Chat with a customer to arrange a self pickup time in store"
+            image-src="src/assets/customer-icon-2.png"
+            image-alt="customer-icon-2"
+            header="SELF PICKUP"
+            description="Head over to their store to pick up your tasty food/groceries"
           />
 
           <br />
 
           <ListWithIcon
-            image-src="src/assets/merchant-icon-3.png"
-            image-alt="merchant-icon-3"
-            header="DELIVER"
-            description="Excess food sold at a reduced price, alleviating loss incurred from food wastage"
+            image-src="src/assets/customer-icon-3.png"
+            image-alt="customer-icon-3"
+            header="ENJOY"
+            description="Enjoy your affordable prepared meal or whip up a storm with your fresh groceries"
           />
-
-          <br />
-
-          <div class="center-div">
-            <router-link to="/login">
-              <button class="signin">Sign In / Register</button>
-            </router-link>
-          </div>
         </v-col>
       </div>
 
       <div class="col-right">
         <img
-          src="../assets/about-merchant.png"
+          src="../assets/about-customer.png"
           alt="Image"
           class="half-image"
         />
@@ -58,10 +50,10 @@
 </template>
 
 <script>
-import ListWithIcon from "../components/ListWithIcon.vue";
+import ListWithIcon from "./ListWithIcon.vue";
 
 export default {
-  name: "AboutMerchant",
+  name: "AboutCustomer",
   components: {
     ListWithIcon,
   },
@@ -73,7 +65,7 @@ export default {
 
 .container {
   background-size: cover;
-  position: fixed;
+  position: relative;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -138,17 +130,6 @@ p {
   width: 70px;
   height: 70px;
   margin: 10px;
-}
-
-.signin {
-  background-color: #16703c;
-  color: #fff;
-  font-family: "Nunito Sans";
-  border: none;
-  border-radius: 28px;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .center-div {

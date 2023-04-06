@@ -3,7 +3,8 @@
 		<div class="center">
             <h1> Forgot password? </h1>
 			<form>
-				<input type="text" name="email" placeholder="Email">
+				<input type="text" name="email" placeholder="Email" style="width:240px">
+				<br/>
 				<button id="verifyEmail" @click="verifyEmail">Verify Email</button>
 			</form>
 		</div>
@@ -50,6 +51,7 @@ export default {
 		justify-content: center;
 		align-items: center;
 		position: absolute;
+		top: 28%;
 	}
 	h1 {
 		color: #fff;

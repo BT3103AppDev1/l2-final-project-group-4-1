@@ -35,14 +35,6 @@
             header="DELIVER"
             description="Excess food sold at a reduced price, alleviating loss incurred from food wastage"
           />
-
-          <br />
-
-          <div class="center-div">
-            <router-link to="/login">
-              <button class="signin">Sign In / Register</button>
-            </router-link>
-          </div>
         </v-col>
       </div>
 
@@ -58,7 +50,7 @@
 </template>
 
 <script>
-import ListWithIcon from "../components/ListWithIcon.vue";
+import ListWithIcon from "./ListWithIcon.vue";
 
 export default {
   name: "AboutMerchant",
@@ -73,7 +65,7 @@ export default {
 
 .container {
   background-size: cover;
-  position: fixed;
+  position: relative;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -138,17 +130,6 @@ p {
   width: 70px;
   height: 70px;
   margin: 10px;
-}
-
-.signin {
-  background-color: #16703c;
-  color: #fff;
-  font-family: "Nunito Sans";
-  border: none;
-  border-radius: 28px;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .center-div {
