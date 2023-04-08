@@ -10,9 +10,13 @@
         <div class="order-price">
           <p>${{ price }}</p>
         </div>
-        <router-link to="/aboutMerchant">
-          <button class="view-order" @click="handleClick">View Order</button>
-        </router-link>
+        <button @click="goSummary(orderid, status)" class="view-order">
+          View Order
+        </button>
+
+        <button @click="goToChat(orderid)" class="merchant-order-chat-btn">
+          Chat
+        </button>
       </div>
     </div>
   </div>
@@ -21,6 +25,15 @@
 <script>
 export default {
   name: "OrdersList",
+  methods: {
+    goToChat(orderId) {
+      this.$router.push({ name: "OrderChat", params: { orderId: orderId } });
+    },
+    goSummary(orderId, status) {
+      console.log("Current status is " + status);
+      this.$router.push(`/customerorderstatus/${orderId}`);
+    },
+  },
   props: {
     id: {
       type: String,
@@ -42,12 +55,15 @@ export default {
       type: Date,
       required: true,
     },
+    status: {
+      type: String,
+      required: true,
+    },
   },
 };
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Nunito Sans");
 .order {
   border: 1px solid black;
   padding: 10px;

@@ -100,10 +100,19 @@ export default {
               name: "",
               email: this.email,
               phoneNumber: "",
-              updatedProfile: false,
               uid: result.user.uid,
+              balance: 0,
+              updatedProfile: false
+            };
+            const customerCart = {
+              uid: result.user.uid,
+              products: [],
+              merchantId: "",
+              merchantName: "",
+              merchantimageUrl: "",
             };
             await addDoc(collection(db, "customers"), customerData);
+            await addDoc(collection(db, "carts"), customerCart);
             // set up merchant data
           } else if (!this.isCustomer) {
             const merchantData = {
@@ -116,6 +125,7 @@ export default {
               phoneNumber: "",
               bankNumber: "",
               uid: result.user.uid,
+              balance: 0,
               updatedProfile: false,
             };
             console.log("merchant", merchantData);
