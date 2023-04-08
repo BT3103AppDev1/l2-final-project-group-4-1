@@ -18,7 +18,7 @@
           @click="viewItem"
           :buttonName="viewButtonName"
         ></NormalButtonUnfilled>
-        <div>&emsp;&emsp;&emsp;&emsp;</div>
+        <br/>
         <NormalButton
           @click="checkoutItem"
           :buttonName="checkoutButtonName"
@@ -96,6 +96,8 @@ img {
   flex-direction: column;
   background-color: #ffffff;
   border-radius: 28px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .listing-item {
@@ -109,5 +111,6 @@ img {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  margin-right: 4.5rem;
 }
 </style>

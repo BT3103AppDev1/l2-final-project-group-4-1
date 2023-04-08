@@ -1,8 +1,8 @@
 <template>
   <div class="app">
+    
+    <CustomerNavigationBar />
     <div class="app-wrapper">
-      <CustomerNavigationBar />
-
       <h1>Cart</h1>
 
       <!-- Items -->
@@ -47,7 +47,7 @@ body {
 h1 {
   font-family: "Nunito Sans", sans-serif;
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: bold;
   text-align: left;
   letter-spacing: 2%;
   line-height: 30px;
@@ -56,9 +56,10 @@ h1 {
 .app {
   margin: auto;
   width: 100%;
-  /* max-width: 1048px; */
 }
-.app-warpper {
-  margin: auto;
+.app-wrapper {
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 </style>

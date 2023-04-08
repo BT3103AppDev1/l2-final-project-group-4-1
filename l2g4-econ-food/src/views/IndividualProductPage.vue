@@ -1,7 +1,7 @@
 <template>
   <div class="app">
-    <div class="app-wrapper">
       <CustomerNavigationBar />
+      <div class="app-wrapper">
       <IndividualProduct />
     </div>
   </div>
@@ -19,7 +19,7 @@ export default {
   },
 };
 </script>
-
+<!-- need to put style scoped? -->
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;1,900&display=swap");
 
@@ -34,10 +34,11 @@ body {
 .app {
   margin: auto;
   width: 100%;
-  /* max-width: 1048px; */
 }
 
-.app-warpper {
-  margin: auto;
+.app-wrapper {
+  margin-top: 40px;
+  margin-left: 120px;
+  margin-right: 120px;
 }
 </style>
